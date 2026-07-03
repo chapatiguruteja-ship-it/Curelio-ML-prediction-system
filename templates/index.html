@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curelio AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="nav-logo">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo-small">
+        <span>Curelio AI</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="#">About</a>
+        <a href="#">Prediction</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+<div class="hero">
+
+    <div class="hero-left">
+        <h1>🏥 Curelio AI</h1>
+
+        <p>
+            AI Powered Cashless Health Insurance Eligibility Prediction System
+        </p>
+
+        <ul>
+            <li>✔ Instant Eligibility Prediction</li>
+            <li>✔ AI Decision Tree Model</li>
+            <li>✔ Fast & Accurate Results</li>
+            <li>✔ Smart Healthcare Assistance</li>
+        </ul>
+    </div>
+
+    
+</div>
+    <script>
+    
+document.querySelector("form").addEventListener("submit", function () {
+
+    const btn = document.getElementById("predictBtn");
+
+    btn.innerHTML = "⏳ Predicting...";
+
+    btn.disabled = true;
+
+});
+
+    </script>
+<div class="dashboard">
+
+    <div class="card">
+        <div class="icon">🤖</div>
+        <h3>AI Model</h3>
+        <p>Decision Tree</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🎯</div>
+        <h3>Accuracy</h3>
+        <p>90.60%</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Prediction</h3>
+        <p>&lt; 1 Second</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🏥</div>
+        <h3>System</h3>
+        <p>Online</p>
+    </div>
+
+</div>
+<div class="container">
+
+    <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+
+    <h1>Curelio AI</h1>
+
+</div>
+
+</body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🏥 Curelio AI</h1>
+        <p>Cashless Health Insurance Eligibility Prediction System</p>
+    </div>
+
+    <form action="/predict" method="POST">
+
+<div class="input-box">
+
+<label>Insurance Provider</label>
+
+<select name="insurance" required>
+   
+    <option " selected disabled">Select Insurance Provider</option>
+
+    {% for item in insurance_list %}
+    <option value="{{ item }}">{{ item }}</option>
+    {% endfor %}
+
+</select>
+<select name="city" required>
+    <option value="" selected disabled>Select City</option>
+
+    {% for item in city_list %}
+    <option value="{{ item }}">{{ item }}</option>
+    {% endfor %}
+</select>
+<select name="hospital" required>
+    <option value="" selected disabled>Select Hospital</option>
+
+    {% for item in hospital_list %}
+    <option value="{{ item }}">{{ item }}</option>
+    {% endfor %}
+</select>
+<select name="policy" required>
+    <option value="" selected disabled>Select Policy Type</option>
+
+    {% for item in policy_list %}
+    <option value="{{ item }}">{{ item }}</option>
+    {% endfor %}
+</select>
+<select name="treatment" required>
+    <option value="" selected disabled>Select Treatment</option>
+
+    {% for item in treatment_list %}
+    <option value="{{ item }}">{{ item }}</option>
+    {% endfor %}
+</select>
+
+</div>
+
+<div class="input-box">
+
+<label>💰 Claim Amount</label>
+<input type="number" name="claim_amount" placeholder="EX:500000" required>
+
+</div>
+
+<button type="submit" id="predict-btn">
+
+SUBMIT
+
+</button>
+
+</form>
+{% if prediction %}
+
+<div class="result-card">
+
+{% if prediction|lower == "yes" %}
+
+<h2 style="color:#16a34a;">✅ Cashless Insurance Eligible</h2>
+
+<p><b>Status:</b> Approved for Cashless Treatment</p>
+
+{% else %}
+
+<h2 style="color:#dc2626;">❌ Cashless Insurance Not Eligible</h2>
+
+<p><b>Status:</b> Not Approved</p>
+
+{% endif %}
+
+<h3>Confidence : {{ confidence }}%</h3>
+
+<hr>
+
+<h4>AI Decision Summary</h4>
+
+<ul>
+
+<li>✔ Insurance policy verified</li>
+
+<li>✔ Hospital information checked</li>
+
+<li>✔ Treatment validated</li>
+
+<li>✔ Claim amount analyzed</li>
+
+</ul>
+
+</div>
+
+{% endif %}
+    <div class="footer">
+
+        Technology with purpose, healthcare with trust
+
+    </div>
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const bar = document.querySelector(".progress-bar");
+    if (bar) {
+        bar.style.width = bar.dataset.width + "%";
+    }
+});
+</script>
+
+</body>
+
+</html>
