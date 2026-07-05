@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Curelio AI</title>
+
+
+<link rel="stylesheet"
+href="{{url_for('static',filename='style.css')}}">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+
+<div class="logo">
+
+<img src="{{url_for('static',filename='logo.png')}}">
+
+<h2>Curelio AI</h2>
+
+</div>
+
+
+
+<div>
+
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/predict">Prediction</a>
+<a href="/contact">Contact</a>
+
+</div>
+
+
+</nav>
+
+
+
+
+
+<section>
+
+
+<h1>Curelio AI</h1>
+
+
+<p>
+AI Powered Cashless Health Insurance Eligibility Prediction System
+</p>
+
+
+
+
+
+<form method="POST">
+
+<label>Select Insurance Provider</label>
+
+<select name="insurance" required>
+
+
+<option value="" disabled selected>
+
+Select Insurance Provider
+
+</option>
+
+
+{% for i in insurance_providers %}
+
+<option value="{{i}}">
+
+{{i}}
+
+</option>
+
+
+{% endfor %}
+
+
+</select>
+<label>Select City</label>
+
+
+<select name="city" required>
+
+
+<option value="" disabled selected>
+
+Select City
+
+</option>
+
+
+{% for city in cities %}
+
+
+<option value="{{city}}">
+
+{{city}}
+
+</option>
+
+
+{% endfor %}
+
+
+</select>
+
+<label>Select Hospital</label>
+
+
+<select name="hospital" required>
+
+
+<option value="" disabled selected>
+Select Hospital
+</option>
+
+
+{% for hospital in hospitals %}
+
+<option value="{{hospital}}">
+{{hospital}}
+</option>
+
+{% endfor %}
+
+
+</select>
+
+
+
+
+
+
+
+
+<label>Select Policy Type</label>
+
+
+<select name="policy" required>
+
+
+<option value="" disabled selected>
+
+Select Policy Type
+
+</option>
+
+
+{% for policy in policies %}
+
+
+<option value="{{policy}}">
+{{policy}}
+</option>
+
+
+{% endfor %}
+
+
+
+</select>
+
+
+
+
+
+
+
+
+
+<label>Select Treatment</label>
+
+
+
+<select name="treatment" required>
+
+
+
+<option value="" disabled selected>
+
+Select Treatment
+
+</option>
+
+
+
+{% for treatment in treatments %}
+
+
+<option value="{{treatment}}">
+{{treatment}}
+</option>
+
+
+{% endfor %}
+
+
+
+</select>
+
+
+
+
+
+
+
+<label>Claim Amount (₹)</label>
+
+
+<input 
+type="number"
+name="amount"
+placeholder="Enter Claim Amount"
+required>
+
+
+
+
+
+<button type="submit">
+
+SUBMIT
+
+</button>
+
+
+
+
+</form>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+{% if result %}
+
+
+<div class="popup">
+
+
+<div class="box">
+
+
+
+{% if result=="eligible" %}
+
+
+
+<div class="tick">
+
+✓
+
+</div>
+
+
+<h2 class="green">
+
+Eligible for Cashless
+
+</h2>
+
+
+
+<p>
+
+The patient is eligible for cashless treatment under the selected policy.
+
+</p>
+
+
+
+
+{% else %}
+
+
+
+
+<div class="cross">
+
+✕
+
+</div>
+
+
+<h2 class="red">
+
+Not Eligible
+
+</h2>
+
+
+
+<p>
+
+The patient is not eligible for cashless treatment.
+
+</p>
+
+
+
+{% endif %}
+
+
+
+
+
+<a href="/predict">
+
+<button>
+
+OK
+
+</button>
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+{% endif %}
+
+
+
+
+
+<footer>
+
+© 2026 Curelio AI. All rights reserved.
+
+</footer>
+
+
+
+
+</body>
+
+
+</html>
