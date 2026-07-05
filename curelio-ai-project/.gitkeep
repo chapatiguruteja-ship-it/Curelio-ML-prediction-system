@@ -1,0 +1,8 @@
+curelio-ai-project/app.py
+  curelio-ai-project/static
+  curelio-ai-project/decision_tree_model.pkl
+  curelio-ai-project/label_encoders.pkl
+  curelio-ai-project/requirements.txt
+  curelio-ai-project/runtime.txt
+  curelio-ai-project/procfile
+  
