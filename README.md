@@ -122,16 +122,11 @@ https://curelio-ai-prediction-system.onrender.com
 
 ---
 
-📸 Project Output
-
-<img width="1920" height="1080" alt="Screenshot 2026-07-06 171534" src="https://github.com/user-attachments/assets/6fb6bf5e-bef7-43f8-80b8-48768c854c05" />
-<img width="1920" height="1080" alt="Screenshot 2026-07-06 171606" src="https://github.com/user-attachments/assets/85842cdb-aca1-487c-a526-9908405bc032" />
-<img width="1920" height="1080" alt="Screenshot 2026-07-06 171707" src="https://github.com/user-attachments/assets/a17a027f-d894-4586-87ee-b0743b02dbf4" />
 
 
 
 ##project Demo
-
+https://drive.google.com/file/d/1S8NJICwzpSN6TT0fIefXeocP0rP7sQVS/view?usp=drive_link
 
 ---
 
