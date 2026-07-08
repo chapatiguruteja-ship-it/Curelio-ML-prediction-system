@@ -113,7 +113,7 @@ pip install -r requirements.txt
 
 Run Application
 
-python app.py
+python app.py'''
 ---
 
 ##live website:
