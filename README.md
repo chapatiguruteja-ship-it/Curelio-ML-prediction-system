@@ -114,8 +114,9 @@ pip install -r requirements.txt
 Run Application
 
 python app.py
+---
 
-Open browser:
+##live website:
 
 https://curelio-ai-prediction-system.onrender.com
 
@@ -125,12 +126,13 @@ https://curelio-ai-prediction-system.onrender.com
 
 
 
-🎥 project Demo
+##🎥 project Demo
+
 https://drive.google.com/file/d/1S8NJICwzpSN6TT0fIefXeocP0rP7sQVS/view?usp=drive_link
 
 ---
 
-🔮 Future Enhancements
+##🔮 Future Enhancements
 
 Real-time hospital and insurance database integration
 
@@ -146,7 +148,7 @@ Secure user authentication system
 
 ---
 
-👨‍💻 Developed By
+##👨‍💻 Developed By
 
 Guru Teja & Navya
 
@@ -156,7 +158,7 @@ DEVSPRINT
 
 ---
 
-📌 Conclusion
+##📌 Conclusion
 
 Curelio demonstrates how Machine Learning and Artificial Intelligence can be applied in healthcare insurance systems to support faster eligibility prediction and improve decision-making efficiency.
 
