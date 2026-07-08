@@ -113,12 +113,13 @@ pip install -r requirements.txt
 
 Run Application
 
-python app.py'''
+python app.py
+'''
 ---
 
-##live website:
+##live website🌐:
 
-https://curelio-ai-prediction-system.onrender.com
+🔗https://curelio-ai-prediction-system.onrender.com
 
 
 ---
@@ -128,7 +129,7 @@ https://curelio-ai-prediction-system.onrender.com
 
 ##🎥 project Demo
 
-https://drive.google.com/file/d/1S8NJICwzpSN6TT0fIefXeocP0rP7sQVS/view?usp=drive_link
+🔗https://drive.google.com/file/d/1S8NJICwzpSN6TT0fIefXeocP0rP7sQVS/view?usp=drive_link
 
 ---
 
