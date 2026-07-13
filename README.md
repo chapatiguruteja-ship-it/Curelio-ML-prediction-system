@@ -4,7 +4,7 @@
 
 ## 📌 Overview
 
-Curelio is a Machine Learning based healthcare insurance prediction system developed as an internship project provided by DEVSPRINT.
+Curelio is a Machine Learning based healthcare insurance prediction system developed as an internship project .
 
 The system is designed to predict cashless health insurance eligibility by analyzing healthcare and insurance-related information such as insurance provider, hospital details, policy type, and treatment details.
 
